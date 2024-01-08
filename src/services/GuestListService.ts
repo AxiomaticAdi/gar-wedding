@@ -57,7 +57,8 @@ function mapObjectToGuests(resultObj: any): Guest[] | undefined {
 		return undefined;
 	}
 
-	for (let i = 0; i < resultObj.table.rows.length; i++) {
+	// ignore first row with i=1
+	for (let i = 1; i < resultObj.table.rows.length; i++) {
 		const cell = resultObj.table.rows[i];
 		const guest = sheetRowToMatch(cell, i.toString());
 		guests.push(guest);

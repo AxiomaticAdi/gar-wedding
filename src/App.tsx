@@ -42,13 +42,30 @@ function App() {
 
 	return (
 		<Page>
-			<h3 className="text-6xl">Guest Lookup</h3>
-			<AutoCompleteTextInput
-				placeholder={"Type your name..."}
-				dataSet={guestNames}
-				onSelect={handleSelectGuest}
-			/>
-			<GuestInfoSection guest={selectedGuest} />
+			<div className="flex flex-col items-center gap-4">
+				<img
+					src="weddingphoto.webp"
+					alt="Couple photo"
+					className="rounded-full h-60 w-60 grayscale"
+				/>
+				<h3 className="text-5xl font-bold">Shuttle Info Lookup</h3>
+				{!selectedGuest && (
+					<AutoCompleteTextInput
+						placeholder={"Type your name..."}
+						dataSet={guestNames}
+						onSelect={handleSelectGuest}
+					/>
+				)}
+				<GuestInfoSection guest={selectedGuest} />
+				{selectedGuest && (
+					<button
+						onClick={() => setSelectedGuest(undefined)}
+						className="border p-2 rounded-md shadow"
+					>
+						Clear
+					</button>
+				)}
+			</div>
 		</Page>
 	);
 }

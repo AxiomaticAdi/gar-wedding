@@ -1,4 +1,5 @@
 import { Guest } from "../types";
+import InfoBox from "./InfoBox";
 
 interface GuestInfoSectionProps {
 	guest: Guest | undefined;
@@ -11,11 +12,19 @@ export default function GuestInfoSection({ guest }: GuestInfoSectionProps) {
 	}
 
 	return (
-		<div className="flex flex-col items-center">
-			<div className="text-2xl">{guest.fullName}</div>
-			<div>Arrival Shuttle: {guest.arrivalShuttle}</div>
-			<div>Departure Shuttle: {guest.departureShuttle}</div>
-			<div>Table Number: {guest.receptionTableNumber}</div>
+		<div className="flex flex-col items-center gap-4 py-4 px-6">
+			<div className="text-2xl font-semibold">{guest.fullName}</div>
+			<div className="flex flex-col gap-4">
+				<InfoBox title={"Arrival Shuttle"} description={guest.arrivalShuttle} />
+				<InfoBox
+					title={"Departure Shuttle"}
+					description={guest.departureShuttle}
+				/>
+				<InfoBox
+					title={"Reception Table"}
+					description={guest.receptionTableNumber}
+				/>
+			</div>
 		</div>
 	);
 }
