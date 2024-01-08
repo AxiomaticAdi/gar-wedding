@@ -11,8 +11,8 @@ export default function GuestInfoSection({ guest }: GuestInfoSectionProps) {
 	}
 
 	return (
-		<div className="flex flex-col">
-			<div>Name: {guest.fullName}</div>
+		<div className="flex flex-col items-center">
+			<div className="text-2xl">{guest.fullName}</div>
 			<div>Arrival Shuttle: {guest.arrivalShuttle}</div>
 			<div>Departure Shuttle: {guest.departureShuttle}</div>
 			<div>Table Number: {guest.receptionTableNumber}</div>
