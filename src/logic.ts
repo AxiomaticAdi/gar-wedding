@@ -11,15 +11,11 @@ export const alphabeticalLastNameSort = (a: Guest, b: Guest) => {
 
 export function getOtherTableGuests(currentGuest: Guest, guestList: Guest[]) {
 	const currentGuestTableNumber = currentGuest.receptionTableNumber;
-	const currentGuestId = currentGuest.id;
 
-	// Filter for guests at the same table and exclude the target guest
+	// Filter for all guests at the same table
 	const tableGuests = guestList.filter(
-		(guest) =>
-			guest.receptionTableNumber === currentGuestTableNumber &&
-			guest.id !== currentGuestId
+		(guest) => guest.receptionTableNumber === currentGuestTableNumber
 	);
 
-	// Select every other guest at the table
 	return tableGuests.map((guest) => guest.fullName);
 }
