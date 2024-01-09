@@ -6,6 +6,7 @@ import LoadingSpinner from "./components/LoadingSpinner";
 import Page from "./components/Page";
 import GuestInfoSection from "./components/GuestInfoSection";
 import { alphabeticalLastNameSort } from "./logic";
+import TableModal from "./components/TableModal";
 
 function App() {
 	const [guestList, setGuestList] = useState<Guest[]>();
@@ -67,6 +68,7 @@ function App() {
 						Clear
 					</button>
 				)}
+				<TableModal />
 			</div>
 		</Page>
 	);

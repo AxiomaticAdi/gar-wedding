@@ -1,6 +1,8 @@
 import { Guest } from "../types";
 import InfoBox from "./InfoBox";
 
+import { useModal } from "../context/TableModalContext";
+
 interface GuestInfoSectionProps {
 	guest: Guest | undefined;
 }
@@ -10,6 +12,8 @@ export default function GuestInfoSection({ guest }: GuestInfoSectionProps) {
 	if (guest === undefined) {
 		return null;
 	}
+
+	const { toggleModal } = useModal();
 
 	return (
 		<div className="flex flex-col items-center gap-4 py-4 px-6">
@@ -23,6 +27,7 @@ export default function GuestInfoSection({ guest }: GuestInfoSectionProps) {
 				<InfoBox
 					title={"Reception Table"}
 					description={guest.receptionTableNumber}
+					onClick={toggleModal}
 				/>
 			</div>
 		</div>
