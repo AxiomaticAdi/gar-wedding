@@ -5,6 +5,7 @@ import AutoCompleteTextInput from "./components/AutoCompleteTextInput";
 import LoadingSpinner from "./components/LoadingSpinner";
 import Page from "./components/Page";
 import GuestInfoSection from "./components/GuestInfoSection";
+import { alphabeticalLastNameSort } from "./logic";
 
 function App() {
 	const [guestList, setGuestList] = useState<Guest[]>();
@@ -17,6 +18,7 @@ function App() {
 		// Fetch Games
 		if (guestList === undefined) {
 			GuestListService.fetchGuestsAsync().then((res) => {
+				res.sort(alphabeticalLastNameSort);
 				setGuestList(res);
 			});
 		}

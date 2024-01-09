@@ -23,8 +23,6 @@ export function sheetRowToMatch(cell: SheetRow, id: string): Guest {
 	const lastName = String(cell.c[++column]?.v) ?? "";
 	const fullName = firstName + " " + lastName;
 
-	column = column + 2;
-
 	const rsvp_Haldi = String(cell.c[++column]?.v) === "Attending";
 	const rsvp_Wedding = String(cell.c[++column]?.v) === "Attending";
 	const rsvp_Breakfast = String(cell.c[++column]?.v) === "Attending";
@@ -58,7 +56,7 @@ function mapObjectToGuests(resultObj: any): Guest[] | undefined {
 	}
 
 	// ignore first row with i=1
-	for (let i = 1; i < resultObj.table.rows.length; i++) {
+	for (let i = 0; i < resultObj.table.rows.length; i++) {
 		const cell = resultObj.table.rows[i];
 		const guest = sheetRowToMatch(cell, i.toString());
 		guests.push(guest);
