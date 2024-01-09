@@ -68,7 +68,7 @@ function App() {
 						Clear
 					</button>
 				)}
-				<TableModal />
+				<TableModal guest={selectedGuest} guestList={guestList} />
 			</div>
 		</Page>
 	);
