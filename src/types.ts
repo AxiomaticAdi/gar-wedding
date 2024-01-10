@@ -17,12 +17,12 @@ export type Shuttle = {
 	pickupName: string;
 	pickupAddress: string;
 	pickupTime: string;
-	pickupNotes: string;
+	pickupNotes?: string;
 	dropoffName: string;
 	dropoffAddress: string;
 	dropoffTime: string;
-	dropoffNotes: string;
-	notes: string;
+	dropoffNotes?: string;
+	notes?: string;
 };
 
 export type ShuttleOptionsDictionary = {

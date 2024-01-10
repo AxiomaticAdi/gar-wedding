@@ -35,9 +35,14 @@ export default function ErrorPage() {
 						<i>{error.statusText || error.message}</i>
 					) : null}
 				</div>
-				<Link to={"/gar-wedding/"} className="pt-4">
-					<CustomButton>Home</CustomButton>
-				</Link>
+				<div className="flex flex-wrap gap-4">
+					<Link to={"/gar-wedding/"} className="pt-4">
+						<CustomButton>Home</CustomButton>
+					</Link>
+					<Link to={"/gar-wedding/shuttles/"} className="pt-4">
+						<CustomButton>Shuttles</CustomButton>
+					</Link>
+				</div>
 			</div>
 		</Page>
 	);

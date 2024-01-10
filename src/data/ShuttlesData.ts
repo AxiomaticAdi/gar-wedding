@@ -2,15 +2,17 @@ import { ShuttleOptionsDictionary } from "../types";
 
 const airportAddress =
 	"Aeropuerto Internacional Benito Juárez, Av. Capitán Carlos León S/N, Peñón de los Baños, Venustiano Carranza, 15620 Ciudad de México, CDMX, Mexico";
+const hotelAddress =
+	"Av. P.º de la Reforma 465, Cuauhtémoc, 06500 Ciudad de México, CDMX, Mexico";
 const venueAddress =
 	"Hacienda Vista Hermosa, Carretera Alpuyeca Tequesquitengo Km 7, 62680 San José Vista Hermosa, Mor., Mexico";
 
 export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
 	// TODO: Change Shakshuka to Anakin + Vader
-	Anakin: {
+	anakin: {
 		id: "Anakin: 12PM @ City",
 		name: "Anakin",
-		pickupName: "Shakshuka",
+		pickupName: "Airport",
 		pickupAddress: airportAddress,
 		pickupTime: "08:00",
 		pickupNotes: "Front door",
@@ -20,11 +22,11 @@ export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
 		dropoffNotes: "Back entrance",
 		notes: "Regular route",
 	},
-	Vader: {
+	vader: {
 		id: "Vader: 12:30PM @ City",
 		name: "Vader",
-		pickupName: "Shakshuka",
-		pickupAddress: "123 Main St",
+		pickupName: "Hotel Marquis Reforma",
+		pickupAddress: hotelAddress,
 		pickupTime: "08:00",
 		pickupNotes: "Front door",
 		dropoffName: "Venue",
@@ -33,7 +35,7 @@ export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
 		dropoffNotes: "Back entrance",
 		notes: "Regular route",
 	},
-	Grogu: {
+	grogu: {
 		id: "Einstein: 3PM @ Airport",
 		name: "Grogu",
 		pickupName: "Shakshuka",
@@ -50,7 +52,7 @@ export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
 
 export const DepartureShuttlesData: ShuttleOptionsDictionary = {
 	// TODO: Change Shakshuka to Anakin + Vader
-	Shakshuka: {
+	shakshuka: {
 		id: "Anakin: 12PM @ City",
 		name: "Shakshuka",
 		pickupName: "Venue",
@@ -63,7 +65,7 @@ export const DepartureShuttlesData: ShuttleOptionsDictionary = {
 		dropoffNotes: "Back entrance",
 		notes: "Regular route",
 	},
-	Taco: {
+	taco: {
 		id: "Vader: 12:30PM @ City",
 		name: "Taco",
 		pickupName: "Shakshuka",
@@ -76,4 +78,9 @@ export const DepartureShuttlesData: ShuttleOptionsDictionary = {
 		dropoffNotes: "Back entrance",
 		notes: "Regular route",
 	},
+};
+
+export const allShuttlesData: ShuttleOptionsDictionary = {
+	...ArrivalShuttlesData,
+	...DepartureShuttlesData,
 };
