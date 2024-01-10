@@ -12,9 +12,7 @@ export default function ShuttleDetailsPage() {
 	return (
 		<Page>
 			<div className="p-4 shadow-md rounded bg-white mx-4 sm:mx-0 flex flex-col gap-4">
-				<h2 className="text-2xl text-center font-bold my-auto">
-					{shuttle.name}
-				</h2>
+				<h2 className="text-2xl text-center font-bold my-auto">{shuttle.id}</h2>
 
 				<Divider />
 

@@ -10,8 +10,8 @@ const venueAddress =
 export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
 	// TODO: Change Shakshuka to Anakin + Vader
 	anakin: {
-		id: "Anakin: 12PM @ City",
-		name: "Anakin",
+		id: "Anakin",
+		description: "12PM @ Airport",
 		pickupName: "Airport",
 		pickupAddress: airportAddress,
 		pickupTime: "08:00",
@@ -23,9 +23,9 @@ export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
 		notes: "Regular route",
 	},
 	vader: {
-		id: "Vader: 12:30PM @ City",
-		name: "Vader",
-		pickupName: "Hotel Marquis Reforma",
+		id: "Vader",
+		description: "12:30PM @ City",
+		pickupName: "City",
 		pickupAddress: hotelAddress,
 		pickupTime: "08:00",
 		pickupNotes: "Front door",
@@ -35,8 +35,8 @@ export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
 		dropoffNotes: "Back entrance",
 	},
 	grogu: {
-		id: "Einstein: 3PM @ Airport",
-		name: "Grogu",
+		id: "Grogu",
+		description: "3PM @ Airport",
 		pickupName: "Shakshuka",
 		pickupAddress: "123 Main St",
 		pickupTime: "08:00",
@@ -52,8 +52,8 @@ export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
 export const DepartureShuttlesData: ShuttleOptionsDictionary = {
 	// TODO: Change Shakshuka to Anakin + Vader
 	shakshuka: {
-		id: "Anakin: 12PM @ City",
-		name: "Shakshuka",
+		id: "Shakshuka",
+		description: "7AM @ Venue",
 		pickupName: "Venue",
 		pickupAddress: venueAddress,
 		pickupTime: "08:00",
@@ -65,8 +65,8 @@ export const DepartureShuttlesData: ShuttleOptionsDictionary = {
 		notes: "Regular route",
 	},
 	taco: {
-		id: "Vader: 12:30PM @ City",
-		name: "Taco",
+		id: "Taco",
+		description: "11AM @ Venue",
 		pickupName: "Shakshuka",
 		pickupAddress: venueAddress,
 		pickupTime: "08:00",
@@ -83,3 +83,5 @@ export const allShuttlesData: ShuttleOptionsDictionary = {
 	...ArrivalShuttlesData,
 	...DepartureShuttlesData,
 };
+
+export const allShuttleNames = Object.keys(allShuttlesData);

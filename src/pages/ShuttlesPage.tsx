@@ -24,7 +24,7 @@ export default function ShuttlesPage() {
 						{Object.entries(ArrivalShuttlesData).map(([shuttleId, shuttle]) => (
 							<InfoBox
 								key={shuttleId}
-								title={shuttle.name}
+								title={shuttle.id}
 								onClick={() => handleShuttleClick(shuttleId)}
 							/>
 						))}
@@ -37,7 +37,7 @@ export default function ShuttlesPage() {
 							([shuttleId, shuttle]) => (
 								<InfoBox
 									key={shuttleId}
-									title={shuttle.name}
+									title={shuttle.id}
 									onClick={() => handleShuttleClick(shuttleId)}
 								/>
 							)

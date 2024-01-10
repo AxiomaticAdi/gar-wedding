@@ -1,19 +1,47 @@
+import { useNavigate } from "react-router-dom";
+
 import { Guest } from "../types";
 import InfoBox from "./InfoBox";
-
 import { useModal } from "../context/TableModalContext";
+import { allShuttleNames, allShuttlesData } from "../data/ShuttlesData";
 
 interface GuestInfoSectionProps {
 	guest: Guest | undefined;
 }
 
 export default function GuestInfoSection({ guest }: GuestInfoSectionProps) {
+	const navigate = useNavigate();
+	const { toggleModal } = useModal();
+
 	// Return nothing if undefined
 	if (guest === undefined) {
 		return null;
 	}
 
-	const { toggleModal } = useModal();
+	const writeDescription = (shuttleIdString: string): string => {
+		const shuttleId = shuttleIdString.toLowerCase();
+
+		if (allShuttleNames.includes(shuttleId)) {
+			return (
+				allShuttlesData[shuttleId as keyof typeof allShuttlesData].id +
+				": " +
+				allShuttlesData[shuttleId as keyof typeof allShuttlesData].description
+			);
+		}
+
+		return shuttleIdString;
+	};
+
+	const handleShuttleClick = (shuttleIdString: string) => {
+		return () => {
+			const slug = shuttleIdString.toLowerCase();
+			if (allShuttleNames.includes(slug)) {
+				navigate(`/gar-wedding/shuttles/${slug}`);
+			} else {
+				navigate(`/gar-wedding/shuttles/`);
+			}
+		};
+	};
 
 	return (
 		<div className="flex flex-col items-center gap-4 py-4 px-6">
@@ -21,11 +49,12 @@ export default function GuestInfoSection({ guest }: GuestInfoSectionProps) {
 			<div className="flex flex-col gap-4">
 				<InfoBox
 					title={"Arrival Shuttle"}
-					description={guest.arrivalShuttleId}
+					description={writeDescription(guest.arrivalShuttleId)}
+					onClick={handleShuttleClick(guest.arrivalShuttleId)}
 				/>
 				<InfoBox
 					title={"Departure Shuttle"}
-					description={guest.departureShuttleId}
+					description={writeDescription(guest.departureShuttleId)}
 				/>
 				<InfoBox
 					title={"Reception Table"}
