@@ -7,6 +7,7 @@ import {
 	ArrivalShuttlesData,
 	DepartureShuttlesData,
 } from "../data/ShuttlesData";
+import NavigationButtonGroup from "../components/NavigationButtonGroup";
 
 export default function ShuttlesPage() {
 	const navigate = useNavigate();
@@ -18,8 +19,9 @@ export default function ShuttlesPage() {
 	return (
 		<Page>
 			<div className="flex flex-col items-center gap-12">
+				<h3 className="text-5xl font-bold">All Shuttles</h3>
 				<div className="flex flex-col items-center justify-center gap-4">
-					<h3 className="text-5xl font-bold">Arrival Shuttles</h3>
+					<h3 className="text-3xl font-bold">Arrival Shuttles</h3>
 					<div className="flex flex-wrap justify-center gap-4">
 						{Object.entries(ArrivalShuttlesData).map(([shuttleId, shuttle]) => (
 							<InfoBox
@@ -31,7 +33,7 @@ export default function ShuttlesPage() {
 					</div>
 				</div>
 				<div className="flex flex-col items-center justify-center gap-4">
-					<h3 className="text-5xl font-bold">Departure Shuttles</h3>
+					<h3 className="text-3xl font-bold">Departure Shuttles</h3>
 					<div className="flex flex-wrap justify-center gap-4">
 						{Object.entries(DepartureShuttlesData).map(
 							([shuttleId, shuttle]) => (
@@ -44,11 +46,12 @@ export default function ShuttlesPage() {
 						)}
 					</div>
 				</div>
-				<div className="flex flex-col items-center justify-center text-gray-500">
-					<h2>
+				<div className="flex flex-col items-center justify-center">
+					<h2 className="text-gray-500">
 						Want to change shuttles? Contact Adi or Gracie to check
 						availability!
 					</h2>
+					<NavigationButtonGroup includeAllShuttles={false} />
 				</div>
 			</div>
 		</Page>
