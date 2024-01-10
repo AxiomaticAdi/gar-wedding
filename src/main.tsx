@@ -7,8 +7,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { ModalProvider } from "./context/TableModalContext";
 import ErrorPage from "./pages/ErrorPage.tsx";
-import ShuttleDetails from "./pages/ShuttleDetails.tsx";
-import Shuttles from "./pages/Shuttles.tsx";
+import ShuttleDetailsPage from "./pages/ShuttleDetailsPage.tsx";
+import ShuttlesPage from "./pages/ShuttlesPage.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -18,12 +18,12 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/gar-wedding/shuttles/",
-		element: <Shuttles />,
+		element: <ShuttlesPage />,
 		errorElement: <ErrorPage />,
 	},
 	{
 		path: "/gar-wedding/shuttles/:shuttleId",
-		element: <ShuttleDetails />,
+		element: <ShuttleDetailsPage />,
 		errorElement: <ErrorPage />,
 	},
 ]);

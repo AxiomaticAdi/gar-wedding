@@ -19,10 +19,13 @@ export default function GuestInfoSection({ guest }: GuestInfoSectionProps) {
 		<div className="flex flex-col items-center gap-4 py-4 px-6">
 			<div className="text-2xl font-semibold">{guest.fullName}</div>
 			<div className="flex flex-col gap-4">
-				<InfoBox title={"Arrival Shuttle"} description={guest.arrivalShuttle} />
+				<InfoBox
+					title={"Arrival Shuttle"}
+					description={guest.arrivalShuttleId}
+				/>
 				<InfoBox
 					title={"Departure Shuttle"}
-					description={guest.departureShuttle}
+					description={guest.departureShuttleId}
 				/>
 				<InfoBox
 					title={"Reception Table"}
