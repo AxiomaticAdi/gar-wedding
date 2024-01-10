@@ -39,8 +39,8 @@ export function sheetRowToMatch(cell: SheetRow, id: string): Guest {
 		rsvp_Haldi: rsvp_Haldi,
 		rsvp_Wedding: rsvp_Wedding,
 		rsvp_Breakfast: rsvp_Breakfast,
-		arrivalShuttle: arrivalShuttle,
-		departureShuttle: departureShuttle,
+		arrivalShuttleId: arrivalShuttle,
+		departureShuttleId: departureShuttle,
 		receptionTableNumber: receptionTableNumber,
 	};
 }
