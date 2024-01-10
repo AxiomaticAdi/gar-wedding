@@ -2,6 +2,7 @@ import Page from "../components/Page";
 import { useParams } from "react-router-dom";
 import { allShuttlesData } from "../data/ShuttlesData";
 import Divider from "../components/Divider";
+import NavigationButtonGroup from "../components/NavigationButtonGroup";
 
 export default function ShuttleDetailsPage() {
 	const { shuttleId } = useParams();
@@ -51,12 +52,21 @@ export default function ShuttleDetailsPage() {
 							<strong>Dropoff Notes:</strong> {shuttle.dropoffNotes}
 						</div>
 					)}
-					{shuttle.notes && (
-						<div>
-							<strong>Notes:</strong> {shuttle.notes}
-						</div>
-					)}
 				</div>
+
+				{shuttle.notes && (
+					<>
+						<Divider />
+						<div className="rounded flex flex-col gap-2">
+							<div>
+								<strong>Notes:</strong> {shuttle.notes}
+							</div>
+						</div>
+					</>
+				)}
+			</div>
+			<div className="mt-4">
+				<NavigationButtonGroup />
 			</div>
 		</Page>
 	);

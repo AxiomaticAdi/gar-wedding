@@ -1,12 +1,20 @@
 import InfoBox from "../components/InfoBox";
 import Page from "../components/Page";
 
+import { useNavigate } from "react-router-dom";
+
 import {
 	ArrivalShuttlesData,
 	DepartureShuttlesData,
 } from "../data/ShuttlesData";
 
 export default function ShuttlesPage() {
+	const navigate = useNavigate();
+	const handleShuttleClick = (shuttleId: string) => {
+		const slug = shuttleId.toLowerCase();
+		navigate(`/gar-wedding/shuttles/${slug}`);
+	};
+
 	return (
 		<Page>
 			<div className="flex flex-col items-center gap-12">
@@ -14,7 +22,11 @@ export default function ShuttlesPage() {
 					<h3 className="text-5xl font-bold">Arrival Shuttles</h3>
 					<div className="flex flex-wrap justify-center gap-4">
 						{Object.entries(ArrivalShuttlesData).map(([shuttleId, shuttle]) => (
-							<InfoBox key={shuttleId} title={shuttle.name} />
+							<InfoBox
+								key={shuttleId}
+								title={shuttle.name}
+								onClick={() => handleShuttleClick(shuttleId)}
+							/>
 						))}
 					</div>
 				</div>
@@ -23,7 +35,11 @@ export default function ShuttlesPage() {
 					<div className="flex flex-wrap justify-center gap-4">
 						{Object.entries(DepartureShuttlesData).map(
 							([shuttleId, shuttle]) => (
-								<InfoBox key={shuttleId} title={shuttle.name} />
+								<InfoBox
+									key={shuttleId}
+									title={shuttle.name}
+									onClick={() => handleShuttleClick(shuttleId)}
+								/>
 							)
 						)}
 					</div>

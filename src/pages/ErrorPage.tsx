@@ -1,6 +1,7 @@
-import { Link, useRouteError } from "react-router-dom";
+import { useRouteError } from "react-router-dom";
 import Page from "../components/Page";
-import CustomButton from "../components/CustomButton";
+
+import NavigationButtonGroup from "../components/NavigationButtonGroup";
 
 function isErrorWithMessageAndStatusText(
 	error: unknown
@@ -35,14 +36,7 @@ export default function ErrorPage() {
 						<i>{error.statusText || error.message}</i>
 					) : null}
 				</div>
-				<div className="flex flex-wrap gap-4">
-					<Link to={"/gar-wedding/"} className="pt-4">
-						<CustomButton>Home</CustomButton>
-					</Link>
-					<Link to={"/gar-wedding/shuttles/"} className="pt-4">
-						<CustomButton>Shuttles</CustomButton>
-					</Link>
-				</div>
+				<NavigationButtonGroup />
 			</div>
 		</Page>
 	);
