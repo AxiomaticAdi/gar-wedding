@@ -33,7 +33,6 @@ export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
 		dropoffAddress: venueAddress,
 		dropoffTime: "08:30",
 		dropoffNotes: "Back entrance",
-		notes: "Regular route",
 	},
 	grogu: {
 		id: "Einstein: 3PM @ Airport",
