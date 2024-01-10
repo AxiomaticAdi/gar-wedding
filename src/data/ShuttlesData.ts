@@ -7,8 +7,9 @@ const venueAddress =
 
 export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
 	// TODO: Change Shakshuka to Anakin + Vader
-	"Shakshuka: 12PM @ Airport": {
+	Anakin: {
 		id: "Anakin: 12PM @ City",
+		name: "Anakin",
 		pickupName: "Shakshuka",
 		pickupAddress: airportAddress,
 		pickupTime: "08:00",
@@ -19,8 +20,9 @@ export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
 		dropoffNotes: "Back entrance",
 		notes: "Regular route",
 	},
-	"Shakshuka: 12:30PM @ City": {
+	Vader: {
 		id: "Vader: 12:30PM @ City",
+		name: "Vader",
 		pickupName: "Shakshuka",
 		pickupAddress: "123 Main St",
 		pickupTime: "08:00",
@@ -31,8 +33,9 @@ export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
 		dropoffNotes: "Back entrance",
 		notes: "Regular route",
 	},
-	"Einstein: 3PM @ Airport": {
+	Grogu: {
 		id: "Einstein: 3PM @ Airport",
+		name: "Grogu",
 		pickupName: "Shakshuka",
 		pickupAddress: "123 Main St",
 		pickupTime: "08:00",
@@ -47,8 +50,9 @@ export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
 
 export const DepartureShuttlesData: ShuttleOptionsDictionary = {
 	// TODO: Change Shakshuka to Anakin + Vader
-	"Shakshuka: 12PM @ Airport": {
+	Shakshuka: {
 		id: "Anakin: 12PM @ City",
+		name: "Shakshuka",
 		pickupName: "Venue",
 		pickupAddress: venueAddress,
 		pickupTime: "08:00",
@@ -59,20 +63,9 @@ export const DepartureShuttlesData: ShuttleOptionsDictionary = {
 		dropoffNotes: "Back entrance",
 		notes: "Regular route",
 	},
-	"Shakshuka: 12:30PM @ City": {
+	Taco: {
 		id: "Vader: 12:30PM @ City",
-		pickupName: "Shakshuka",
-		pickupAddress: venueAddress,
-		pickupTime: "08:00",
-		pickupNotes: "Front door",
-		dropoffName: "Airport",
-		dropoffAddress: airportAddress,
-		dropoffTime: "08:30",
-		dropoffNotes: "Back entrance",
-		notes: "Regular route",
-	},
-	"Einstein: 3PM @ Airport": {
-		id: "Einstein: 3PM @ Airport",
+		name: "Taco",
 		pickupName: "Shakshuka",
 		pickupAddress: venueAddress,
 		pickupTime: "08:00",

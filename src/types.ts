@@ -13,6 +13,7 @@ export type Guest = {
 
 export type Shuttle = {
 	id: string;
+	name: string;
 	pickupName: string;
 	pickupAddress: string;
 	pickupTime: string;
