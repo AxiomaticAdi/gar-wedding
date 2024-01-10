@@ -1,6 +1,6 @@
 interface InfoBoxProps {
 	title: string;
-	description: string;
+	description?: string;
 	onClick?: () => void;
 }
 
@@ -11,7 +11,7 @@ export default function InfoBox({ title, description, onClick }: InfoBoxProps) {
 			className="flex flex-col justify-center items-center bg-white rounded-md p-3 shadow hover:bg-gray-100"
 		>
 			<h4 className="text-xl text-gray-500">{title}</h4>
-			<p>{description}</p>
+			{description && <p>{description}</p>}
 		</button>
 	);
 }
