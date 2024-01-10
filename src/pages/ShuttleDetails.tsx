@@ -1,9 +1,9 @@
 import Page from "../components/Page";
 
-export default function ShakshukaCity() {
+export default function ShuttleDetails() {
 	return (
 		<Page>
-			<div></div>
+			<div>TEST</div>
 		</Page>
 	);
 }

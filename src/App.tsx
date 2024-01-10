@@ -7,6 +7,7 @@ import Page from "./components/Page";
 import GuestInfoSection from "./components/GuestInfoSection";
 import { alphabeticalLastNameSort } from "./logic";
 import TableModal from "./components/TableModal";
+import CustomButton from "./components/CustomButton";
 
 function App() {
 	const [guestList, setGuestList] = useState<Guest[]>();
@@ -61,12 +62,9 @@ function App() {
 				)}
 				<GuestInfoSection guest={selectedGuest} />
 				{selectedGuest && (
-					<button
-						onClick={() => setSelectedGuest(undefined)}
-						className="border p-2 rounded-md shadow"
-					>
+					<CustomButton onClick={() => setSelectedGuest(undefined)}>
 						Clear
-					</button>
+					</CustomButton>
 				)}
 				<TableModal guest={selectedGuest} guestList={guestList} />
 			</div>
