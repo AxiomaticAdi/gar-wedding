@@ -50,10 +50,9 @@ export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
 };
 
 export const DepartureShuttlesData: ShuttleOptionsDictionary = {
-	// TODO: Change Shakshuka to Anakin + Vader
 	shakshuka: {
 		id: "Shakshuka",
-		description: "7AM @ Venue",
+		description: "7AM to Airport",
 		pickupName: "Venue",
 		pickupAddress: venueAddress,
 		pickupTime: "08:00",
@@ -66,12 +65,12 @@ export const DepartureShuttlesData: ShuttleOptionsDictionary = {
 	},
 	taco: {
 		id: "Taco",
-		description: "11AM @ Venue",
-		pickupName: "Shakshuka",
+		description: "11AM to City",
+		pickupName: "Venue",
 		pickupAddress: venueAddress,
 		pickupTime: "08:00",
 		pickupNotes: "Front door",
-		dropoffName: "Airport",
+		dropoffName: "City",
 		dropoffAddress: airportAddress,
 		dropoffTime: "08:30",
 		dropoffNotes: "Back entrance",

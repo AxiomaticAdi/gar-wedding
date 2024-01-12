@@ -45,7 +45,12 @@ export default function GuestInfoSection({ guest }: GuestInfoSectionProps) {
 
 	return (
 		<div className="flex flex-col items-center gap-4 py-4 px-6">
-			<div className="text-2xl font-semibold">{guest.fullName}</div>
+			<div>
+				<div className="text-2xl font-semibold">{guest.fullName}</div>
+				<div className="text-sm text-gray-500 italic">
+					click below for more info
+				</div>
+			</div>
 			<div className="flex flex-col gap-4">
 				<InfoBox
 					title={"Arrival Shuttle"}
@@ -55,6 +60,7 @@ export default function GuestInfoSection({ guest }: GuestInfoSectionProps) {
 				<InfoBox
 					title={"Departure Shuttle"}
 					description={writeDescription(guest.departureShuttleId)}
+					onClick={handleShuttleClick(guest.departureShuttleId)}
 				/>
 				<InfoBox
 					title={"Reception Table"}

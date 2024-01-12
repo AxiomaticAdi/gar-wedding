@@ -8,7 +8,6 @@ import GuestInfoSection from "./components/GuestInfoSection";
 import { alphabeticalLastNameSort } from "./logic";
 import TableModal from "./components/TableModal";
 import CustomButton from "./components/CustomButton";
-import CouplePhoto from "../public/weddingphoto.webp";
 
 function App() {
 	const [guestList, setGuestList] = useState<Guest[]>();
@@ -49,7 +48,7 @@ function App() {
 		<Page>
 			<div className="flex flex-col items-center gap-4">
 				<img
-					src={CouplePhoto}
+					src={"weddingphoto.webp"}
 					alt="Couple photo"
 					className="rounded-full h-60 w-60 grayscale"
 				/>
