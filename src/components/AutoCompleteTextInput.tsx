@@ -48,7 +48,7 @@ export default function AutoCompleteTextInput({
 					onChange={(event) => setQuery(event.target.value)}
 					placeholder={placeholder}
 					autoComplete="off"
-					className="block w-full pl-2 rounded-md border-0 bg-transparent py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-black"
+					className="block w-full pl-2 rounded-md border-0 bg-white py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-black"
 				/>
 				<Combobox.Options className="absolute z-50 max-h-80 w-full scroll-py-2 divide-y divide-gray-500 overflow-y-auto rounded-md bg-black">
 					<ul className="text-sm text-left text-white">

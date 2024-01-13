@@ -52,7 +52,7 @@ function App() {
 					alt="Couple photo"
 					className="rounded-full h-60 w-60 grayscale"
 				/>
-				<h3 className="text-5xl font-bold">Shuttle Info Lookup</h3>
+				<h3 className="text-5xl font-bold">Guest Info Lookup</h3>
 				{!selectedGuest && (
 					<AutoCompleteTextInput
 						placeholder={"Type your name..."}
