@@ -55,16 +55,19 @@ export default function GuestInfoSection({ guest }: GuestInfoSectionProps) {
 				<InfoBox
 					title={"Arrival Shuttle"}
 					description={writeDescription(guest.arrivalShuttleId)}
+					clickIcon={true}
 					onClick={handleShuttleClick(guest.arrivalShuttleId)}
 				/>
 				<InfoBox
 					title={"Departure Shuttle"}
 					description={writeDescription(guest.departureShuttleId)}
+					clickIcon={true}
 					onClick={handleShuttleClick(guest.departureShuttleId)}
 				/>
 				<InfoBox
 					title={"Reception Table"}
 					description={guest.receptionTableNumber}
+					clickIcon={true}
 					onClick={toggleModal}
 				/>
 			</div>
