@@ -18,6 +18,13 @@ export default function GuestInfoSection({ guest }: GuestInfoSectionProps) {
 		return null;
 	}
 
+	const isRegisteredForArrivalShuttle: boolean = !guest.arrivalShuttleId
+		.toLowerCase()
+		.includes("none");
+	const isRegisteredForDepartureShuttle: boolean = !guest.departureShuttleId
+		.toLowerCase()
+		.includes("none");
+
 	const writeDescription = (shuttleIdString: string): string => {
 		const shuttleId = shuttleIdString.toLowerCase();
 
@@ -37,8 +44,6 @@ export default function GuestInfoSection({ guest }: GuestInfoSectionProps) {
 			const slug = shuttleIdString.toLowerCase();
 			if (allShuttleNames.includes(slug)) {
 				navigate(`/gar-wedding/shuttles/${slug}`);
-			} else {
-				navigate(`/gar-wedding/shuttles/`);
 			}
 		};
 	};
@@ -55,13 +60,13 @@ export default function GuestInfoSection({ guest }: GuestInfoSectionProps) {
 				<InfoBox
 					title={"Arrival Shuttle"}
 					description={writeDescription(guest.arrivalShuttleId)}
-					clickIcon={true}
+					clickIcon={isRegisteredForArrivalShuttle}
 					onClick={handleShuttleClick(guest.arrivalShuttleId)}
 				/>
 				<InfoBox
 					title={"Departure Shuttle"}
 					description={writeDescription(guest.departureShuttleId)}
-					clickIcon={true}
+					clickIcon={isRegisteredForDepartureShuttle}
 					onClick={handleShuttleClick(guest.departureShuttleId)}
 				/>
 				<InfoBox
