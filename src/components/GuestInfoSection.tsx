@@ -43,7 +43,7 @@ export default function GuestInfoSection({ guest }: GuestInfoSectionProps) {
 		return () => {
 			const slug = shuttleIdString.toLowerCase();
 			if (allShuttleNames.includes(slug)) {
-				navigate(`/gar-wedding/shuttles/${slug}`);
+				navigate(`/shuttles/${slug}`);
 			}
 		};
 	};

@@ -13,7 +13,7 @@ export default function ShuttlesPage() {
 	const navigate = useNavigate();
 	const handleShuttleClick = (shuttleId: string) => {
 		const slug = shuttleId.toLowerCase();
-		navigate(`/gar-wedding/shuttles/${slug}`);
+		navigate(`/shuttles/${slug}`);
 	};
 
 	return (

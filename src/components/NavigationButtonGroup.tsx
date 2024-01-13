@@ -12,12 +12,12 @@ export default function NavigationButtonGroup({
 	return (
 		<div className="flex flex-wrap gap-4">
 			{includeHome && (
-				<Link to={"/gar-wedding/"} className="pt-4">
+				<Link to={"/"} className="pt-4">
 					<CustomButton>Home</CustomButton>
 				</Link>
 			)}
 			{includeAllShuttles && (
-				<Link to={"/gar-wedding/shuttles/"} className="pt-4">
+				<Link to={"/shuttles/"} className="pt-4">
 					<CustomButton>All Shuttles</CustomButton>
 				</Link>
 			)}

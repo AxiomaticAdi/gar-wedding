@@ -10,15 +10,15 @@ export default function Navbar() {
 	const links: Link[] = [
 		{
 			text: "Home",
-			path: "/gar-wedding/",
+			path: "/",
 		},
 		{
 			text: "Shuttles",
-			path: "/gar-wedding/shuttles/",
+			path: "/shuttles/",
 		},
 		{
 			text: "Checklist",
-			path: "/gar-wedding/checklist",
+			path: "/checklist",
 		},
 	];
 
