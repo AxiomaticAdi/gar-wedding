@@ -9,6 +9,7 @@ import { ModalProvider } from "./context/TableModalContext";
 import ErrorPage from "./pages/ErrorPage.tsx";
 import ShuttleDetailsPage from "./pages/ShuttleDetailsPage.tsx";
 import ShuttlesPage from "./pages/ShuttlesPage.tsx";
+import ChecklistPage from "./pages/ChecklistPage.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
 	{
 		path: "/gar-wedding/shuttles/:shuttleId",
 		element: <ShuttleDetailsPage />,
+		errorElement: <ErrorPage />,
+	},
+	{
+		path: "/gar-wedding/checklist/",
+		element: <ChecklistPage />,
 		errorElement: <ErrorPage />,
 	},
 ]);
