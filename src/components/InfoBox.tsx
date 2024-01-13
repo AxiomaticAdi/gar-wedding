@@ -1,4 +1,4 @@
-import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
 interface InfoBoxProps {
 	title: string;
@@ -23,8 +23,8 @@ export default function InfoBox({
 				{description && <p>{description}</p>}
 			</div>
 			{clickIcon && (
-				<div className="text-gray-500">
-					<ArrowRightCircleIcon className="w-6 h-6" />
+				<div className="text-gray-500 w-6 h-6">
+					<ChevronRightIcon />
 				</div>
 			)}
 		</button>
