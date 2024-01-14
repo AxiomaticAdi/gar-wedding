@@ -19,3 +19,17 @@ export function getOtherTableGuests(currentGuest: Guest, guestList: Guest[]) {
 
 	return tableGuests.map((guest) => guest.fullName);
 }
+
+export function nameToUrlSlug(fullname: string): string {
+	// Remove all non-English alphabet characters, except for spaces
+	let slug = fullname.replace(/[^a-zA-Z ]/g, "");
+
+	// Replace spaces with dashes (names are still case-sensitive)
+	return slug.replace(/\s+/g, "-");
+}
+
+export function urlSlugToName(slug: string): string {
+	// Replace dashes with spaces
+	let name = slug.replace(/-/g, " ");
+	return name;
+}

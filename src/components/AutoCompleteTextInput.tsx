@@ -41,7 +41,7 @@ export default function AutoCompleteTextInput({
 	);
 
 	return (
-		<Combobox value={query}>
+		<Combobox value={query} onChange={handleSelect}>
 			<div className="relative">
 				<Combobox.Input
 					value={query}
@@ -57,7 +57,6 @@ export default function AutoCompleteTextInput({
 								key={item}
 								value={item}
 								className="flex justify-between rounded-md px-3 py-2 hover:bg-gray-400 hover:text-white"
-								onClick={() => handleSelect(item)}
 							>
 								<span>{item}</span>
 							</Combobox.Option>
