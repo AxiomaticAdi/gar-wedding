@@ -16,7 +16,7 @@ export default function ChecklistItem({
 					aria-describedby="comments-description"
 					name="comments"
 					type="checkbox"
-					className="h-4 w-4 rounded border-gray-300 text-gray-600 focus:ring-gray-600 accent-gray-600"
+					className="h-4 w-4 rounded border-gray-300 text-gray-600 focus:ring-gray-600 accent-gray-600 flex-shrink-0"
 				/>
 				<div className="flex text-left">
 					<p className="text-gray-500">
