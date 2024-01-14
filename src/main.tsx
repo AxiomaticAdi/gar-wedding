@@ -10,11 +10,17 @@ import ErrorPage from "./pages/ErrorPage.tsx";
 import ShuttleDetailsPage from "./pages/ShuttleDetailsPage.tsx";
 import ShuttlesPage from "./pages/ShuttlesPage.tsx";
 import ChecklistPage from "./pages/ChecklistPage.tsx";
+import GuestDetailsPage from "./pages/GuestDetailsPage.tsx";
 
 const router = createHashRouter([
 	{
 		path: "/",
 		element: <App />,
+		errorElement: <ErrorPage />,
+	},
+	{
+		path: "/guests/:guestFullNameSlug",
+		element: <GuestDetailsPage />,
 		errorElement: <ErrorPage />,
 	},
 	{

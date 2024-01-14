@@ -1,23 +1,20 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Guest } from "./types";
 import { GuestListService } from "./services/GuestListService";
 import AutoCompleteTextInput from "./components/AutoCompleteTextInput";
 import LoadingSpinner from "./components/LoadingSpinner";
 import Page from "./components/Page";
-import GuestInfoSection from "./components/GuestInfoSection";
-import { alphabeticalLastNameSort } from "./logic";
-import TableModal from "./components/TableModal";
-import CustomButton from "./components/CustomButton";
+import { alphabeticalLastNameSort, nameToUrlSlug } from "./logic";
 
 function App() {
 	const [guestList, setGuestList] = useState<Guest[]>();
-	const [selectedGuest, setSelectedGuest] = useState<Guest | undefined>(
-		undefined
-	);
+
+	const navigate = useNavigate();
 
 	// On first load
 	useEffect(() => {
-		// Fetch Games
+		// Fetch guests
 		if (guestList === undefined) {
 			GuestListService.fetchGuestsAsync().then((res) => {
 				res.sort(alphabeticalLastNameSort);
@@ -35,11 +32,16 @@ function App() {
 		);
 	}
 
-	const handleSelectGuest = (fullName: string) => {
-		const matchingGuest = guestList.find(
-			(guest) => guest.fullName === fullName
-		);
-		setSelectedGuest(matchingGuest);
+	// const handleSelectGuest = (fullName: string) => {
+	// 	const matchingGuest = guestList.find(
+	// 		(guest) => guest.fullName === fullName
+	// 	);
+	// 	setSelectedGuest(matchingGuest);
+	// };
+
+	const handleClickGuest = (fullName: string) => {
+		const slug = nameToUrlSlug(fullName);
+		navigate(`/guests/${slug}`);
 	};
 
 	const guestNames = new Set(guestList.map((guest) => guest.fullName));
@@ -53,20 +55,11 @@ function App() {
 					className="rounded-full h-60 w-60 grayscale"
 				/>
 				<h3 className="text-5xl font-bold">Guest Info Lookup</h3>
-				{!selectedGuest && (
-					<AutoCompleteTextInput
-						placeholder={"Type your name..."}
-						dataSet={guestNames}
-						onSelect={handleSelectGuest}
-					/>
-				)}
-				<GuestInfoSection guest={selectedGuest} />
-				{selectedGuest && (
-					<CustomButton onClick={() => setSelectedGuest(undefined)}>
-						Clear
-					</CustomButton>
-				)}
-				<TableModal guest={selectedGuest} guestList={guestList} />
+				<AutoCompleteTextInput
+					placeholder={"Type your name..."}
+					dataSet={guestNames}
+					onSelect={handleClickGuest}
+				/>
 			</div>
 		</Page>
 	);

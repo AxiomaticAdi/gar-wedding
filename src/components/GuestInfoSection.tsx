@@ -49,12 +49,9 @@ export default function GuestInfoSection({ guest }: GuestInfoSectionProps) {
 	};
 
 	return (
-		<div className="flex flex-col items-center gap-4 py-4 px-6">
+		<div className="flex flex-col items-center gap-4 pb-4 px-6">
 			<div>
 				<div className="text-2xl font-semibold">{guest.fullName}</div>
-				<div className="text-sm text-gray-500 italic">
-					click below for more info
-				</div>
 			</div>
 			<div className="flex flex-col gap-4">
 				<InfoBox
