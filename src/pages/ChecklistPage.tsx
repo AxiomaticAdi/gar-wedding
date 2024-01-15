@@ -25,6 +25,12 @@ const mustList: ChecklistItemProps[] = [
 		description:
 			"You can check your reserved shuttles on this site - and if you didn't sign up for a shuttle and will need a ride, let us know.",
 	},
+	{
+		id: 5,
+		title: "Got a plan to grab some pesos?",
+		description:
+			"While the venue and any large store will accept credit cards, it's best to keep some cash on hand, particularly for taxis, food stands, etc.",
+	},
 ];
 
 const optionalList: ChecklistItemProps[] = [
