@@ -49,8 +49,7 @@ const optionalList: ChecklistItemProps[] = [
 	{
 		id: 3,
 		title: "Sunscreen: ",
-		description:
-			"Because sunburns don't match wedding outfits. Please note that the Catholic ceremony will be outdoors.",
+		description: "Please note that the Catholic ceremony will be outdoors!",
 	},
 ];
 
