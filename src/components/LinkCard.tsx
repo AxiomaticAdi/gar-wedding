@@ -9,12 +9,12 @@ interface LinkCardProps {
 export default function LinkCard({ title, imageUrl, path }: LinkCardProps) {
 	return (
 		<Link
-			className="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow"
+			className="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow-md"
 			to={path}
 		>
 			<div className="text-2xl font-bold px-4 py-5 sm:px-6">{title}</div>
 			<div className="px-4 py-5 sm:p-6">
-				<img src={imageUrl} />
+				<img src={imageUrl} className="h-80 grayscale rounded-lg" />
 			</div>
 		</Link>
 	);
