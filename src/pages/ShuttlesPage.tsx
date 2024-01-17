@@ -28,6 +28,7 @@ export default function ShuttlesPage() {
 								key={shuttleId}
 								title={shuttle.id}
 								onClick={() => handleShuttleClick(shuttleId)}
+								clickIcon={true}
 							/>
 						))}
 					</div>
@@ -41,11 +42,27 @@ export default function ShuttlesPage() {
 									key={shuttleId}
 									title={shuttle.id}
 									onClick={() => handleShuttleClick(shuttleId)}
+									clickIcon={true}
 								/>
 							)
 						)}
 					</div>
 				</div>
+				<div className="flex flex-col items-center justify-center gap-4">
+					<h3 className="text-3xl font-bold">Shuttle Alternatives</h3>
+					<div className="flex flex-wrap justify-center gap-4">
+						<InfoBox
+							title="Pullman bus"
+							onClick={() => navigate("/pullman-bus/")}
+							clickIcon={true}
+						/>
+						<InfoBox
+							title="Private hire"
+							onClick={() => handleShuttleClick(shuttleId)}
+						/>
+					</div>
+				</div>
+
 				<div className="flex flex-col items-center justify-center">
 					<h2 className="text-gray-500">
 						Want to change shuttles? Contact Adi or Gracie to check
