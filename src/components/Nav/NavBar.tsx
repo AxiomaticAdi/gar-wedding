@@ -18,7 +18,11 @@ export default function Navbar() {
 		},
 		{
 			text: "Checklist",
-			path: "/checklist",
+			path: "/checklist/",
+		},
+		{
+			text: "Guides",
+			path: "/guides/",
 		},
 	];
 
