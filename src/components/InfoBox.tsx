@@ -17,7 +17,9 @@ export default function InfoBox({
 		<button
 			onClick={onClick}
 			className={`flex gap-4 items-center bg-white rounded-md p-3 shadow hover:bg-gray-100 ${
-				clickIcon ? "justify-end" : "justify-center cursor-default"
+				clickIcon
+					? "justify-end hover:cursor-pointer"
+					: "justify-center cursor-default"
 			}`}
 		>
 			<div className="flex flex-col">
