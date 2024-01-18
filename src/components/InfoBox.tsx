@@ -22,7 +22,7 @@ export default function InfoBox({
 					: "justify-center cursor-default"
 			}`}
 		>
-			<div className="flex flex-col">
+			<div className="flex flex-col mx-auto">
 				<h4 className="text-xl text-gray-500">{title}</h4>
 				{description && <p>{description}</p>}
 			</div>
