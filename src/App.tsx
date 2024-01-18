@@ -50,6 +50,11 @@ function App() {
 				<h3 className="text-4xl font-bold">
 					We are SO excited to celebrate with you!
 				</h3>
+				<div className="text-gray-600 max-w-md mx-4">
+					You can find your most up-to-date assigned shuttle information here.
+					We'll be updating this site periodically with more wedding weekend
+					info, so stay tuned!
+				</div>
 				<AutoCompleteTextInput
 					placeholder={"Find your name..."}
 					dataSet={guestNames}
