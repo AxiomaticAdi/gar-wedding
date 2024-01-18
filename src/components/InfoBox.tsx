@@ -16,9 +16,9 @@ export default function InfoBox({
 	return (
 		<button
 			onClick={onClick}
-			className={`flex gap-4 items-center bg-white rounded-md p-3 shadow hover:bg-gray-100 ${
+			className={`flex gap-4 items-center bg-white rounded-md p-3  ${
 				clickIcon
-					? "justify-end hover:cursor-pointer"
+					? "justify-end hover:cursor-pointer shadow-md hover:bg-gray-100"
 					: "justify-center cursor-default"
 			}`}
 		>

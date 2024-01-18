@@ -56,7 +56,7 @@ export default function ShuttlesPage() {
 							onClick={() => navigate("/pullman-bus/")}
 							clickIcon={true}
 						/>
-						<InfoBox title="Private hire" />
+						<InfoBox title="Hire a taxi" clickIcon={false} />
 					</div>
 				</div>
 
