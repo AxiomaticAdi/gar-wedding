@@ -64,14 +64,14 @@ export const DepartureShuttlesData: ShuttleOptionsDictionary = {
 	},
 	taco: {
 		id: "Taco",
-		description: "11:30 AM to City",
+		description: "11 AM to City",
 		pickupName: "Venue",
 		pickupAddress: venueAddress,
-		pickupTime: "11:30 AM",
+		pickupTime: "11 AM",
 		pickupNotes: "Front door",
 		dropoffName: "Hotel Marquis Reforma",
 		dropoffAddress: hotelAddress,
-		dropoffTime: "Expected to reach around 2:15 PM",
+		dropoffTime: "Expected to reach around 1:30 PM",
 		notes:
 			"There may be a group of folks that will head straight to the airport from here - consider carpooling!",
 	},
