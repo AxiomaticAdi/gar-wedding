@@ -7,7 +7,7 @@ export default function SchedulePage() {
 	return (
 		<Page>
 			<h3 className="text-5xl font-bold">Schedule</h3>
-			<div className="flex flex-col mx-auto items-center gap-6 mt-10">
+			<div className="flex flex-col mx-auto items-center gap-6 mt-10 mb-40">
 				<img src={scheduleImage} alt="Schedule" />
 			</div>
 		</Page>

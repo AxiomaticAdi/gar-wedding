@@ -31,7 +31,7 @@ export default function Navbar() {
 	];
 
 	return (
-		<nav className="w-full flex">
+		<nav className="w-full flex my-8 md:my-12">
 			<WebMenu links={links} />
 			<MobileMenu links={links} />
 		</nav>
