@@ -21,10 +21,10 @@ export default function ShuttleDetailsPage() {
 						<strong>Pickup Name:</strong> {shuttle.pickupName}
 					</div>
 					<div>
-						<strong>Pickup Address:</strong> {shuttle.pickupAddress}
+						<strong>Pickup Time:</strong> {shuttle.pickupTime}
 					</div>
 					<div>
-						<strong>Pickup Time:</strong> {shuttle.pickupTime}
+						<strong>Pickup Address:</strong> {shuttle.pickupAddress}
 					</div>
 					{shuttle.pickupNotes && (
 						<div>
@@ -40,10 +40,10 @@ export default function ShuttleDetailsPage() {
 						<strong>Dropoff Name:</strong> {shuttle.dropoffName}
 					</div>
 					<div>
-						<strong>Dropoff Address:</strong> {shuttle.dropoffAddress}
+						<strong>Dropoff Time:</strong> {shuttle.dropoffTime}
 					</div>
 					<div>
-						<strong>Dropoff Time:</strong> {shuttle.dropoffTime}
+						<strong>Dropoff Address:</strong> {shuttle.dropoffAddress}
 					</div>
 					{shuttle.dropoffNotes && (
 						<div>

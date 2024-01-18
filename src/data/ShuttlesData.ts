@@ -1,80 +1,79 @@
 import { ShuttleOptionsDictionary } from "../types";
 
 const airportAddress =
-	"Aeropuerto Internacional Benito Juárez, Av. Capitán Carlos León S/N, Peñón de los Baños, Venustiano Carranza, 15620 Ciudad de México, CDMX, Mexico";
+	"Aeropuerto Internacional Benito Juárez, Terminal 1. Exact location TBD";
 const hotelAddress =
 	"Av. P.º de la Reforma 465, Cuauhtémoc, 06500 Ciudad de México, CDMX, Mexico";
 const venueAddress =
 	"Hacienda Vista Hermosa, Carretera Alpuyeca Tequesquitengo Km 7, 62680 San José Vista Hermosa, Mor., Mexico";
 
 export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
-	// TODO: Change Shakshuka to Anakin + Vader
 	anakin: {
 		id: "Anakin",
-		description: "12PM @ Airport",
+		description: "12 PM @ Airport",
 		pickupName: "Airport",
 		pickupAddress: airportAddress,
-		pickupTime: "08:00",
-		pickupNotes: "Front door",
+		pickupTime: "12:00 PM",
+		pickupNotes:
+			"Pickup will be at Terminal 1. Folks landing at Terminal 2 will need to take the Skytrain over to Terminal 1.",
 		dropoffName: "Venue",
 		dropoffAddress: venueAddress,
-		dropoffTime: "08:30",
-		dropoffNotes: "Back entrance",
-		notes: "Regular route",
+		dropoffTime: "Expected to reach the venue around 3:30 PM",
+		dropoffNotes:
+			"Note that this shuttle will make a stop in Mexico City to pick up guests who arrived early to explore. Hope you'll have a moment to grab some tacos. Thanks for your patience!",
 	},
 	vader: {
 		id: "Vader",
-		description: "12:30PM @ City",
-		pickupName: "City",
+		description: "12:30 PM @ Hotel",
+		pickupName: "Hotel Marquis Reforma",
 		pickupAddress: hotelAddress,
-		pickupTime: "08:00",
-		pickupNotes: "Front door",
+		pickupTime: "12:30 PM",
+		pickupNotes:
+			"Note that this shuttle will already have some passengers who got on at the airport.",
 		dropoffName: "Venue",
 		dropoffAddress: venueAddress,
-		dropoffTime: "08:30",
-		dropoffNotes: "Back entrance",
+		dropoffTime: "Expected to reach the venue around 3:30 PM",
 	},
 	grogu: {
 		id: "Grogu",
-		description: "3PM @ Airport",
-		pickupName: "Shakshuka",
-		pickupAddress: "123 Main St",
-		pickupTime: "08:00",
-		pickupNotes: "Front door",
+		description: "3:15 PM @ Airport",
+		pickupName: "Airport",
+		pickupAddress: airportAddress,
+		pickupTime: "3:15 PM",
+		pickupNotes:
+			"Pickup will be at Terminal 1. This is the latest courtesy shuttle we are able to offer. If you happen to miss this shuttle, please consider the Pullman bus or a private vehicle hire.",
 		dropoffName: "Venue",
 		dropoffAddress: venueAddress,
-		dropoffTime: "08:30",
-		dropoffNotes: "Back entrance",
-		notes: "Regular route",
+		dropoffTime: "Expected to reach the venue around 7 PM",
+		notes:
+			"Mexico city traffic at this time can be pretty crazy - your trip will take about 3.5 hours. Please plan to bring some food and entertainment!",
 	},
 };
 
 export const DepartureShuttlesData: ShuttleOptionsDictionary = {
 	shakshuka: {
 		id: "Shakshuka",
-		description: "7AM to Airport",
+		description: "7:15 AM to Airport",
 		pickupName: "Venue",
 		pickupAddress: venueAddress,
-		pickupTime: "08:00",
-		pickupNotes: "Front door",
+		pickupTime: "7:15 AM",
+		pickupNotes: "Shuttle will depart from the road near the lobby",
 		dropoffName: "Airport",
 		dropoffAddress: airportAddress,
-		dropoffTime: "08:30",
-		dropoffNotes: "Back entrance",
-		notes: "Regular route",
+		dropoffTime: "10:00 AM",
 	},
 	taco: {
 		id: "Taco",
-		description: "11AM to City",
+		description: "11:30 AM to City",
 		pickupName: "Venue",
 		pickupAddress: venueAddress,
-		pickupTime: "08:00",
+		pickupTime: "11:30 AM",
 		pickupNotes: "Front door",
-		dropoffName: "City",
-		dropoffAddress: airportAddress,
-		dropoffTime: "08:30",
-		dropoffNotes: "Back entrance",
-		notes: "Regular route",
+		dropoffName: "Hotel Marquis Reforma",
+		dropoffAddress: hotelAddress,
+		dropoffTime: "Expected to reach around 2:15 PM",
+		notes:
+			"There may be a group of folks that will head straight to the airport from here - consider carpooling!",
 	},
 };
 
