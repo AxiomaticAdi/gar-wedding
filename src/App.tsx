@@ -32,13 +32,6 @@ function App() {
 		);
 	}
 
-	// const handleSelectGuest = (fullName: string) => {
-	// 	const matchingGuest = guestList.find(
-	// 		(guest) => guest.fullName === fullName
-	// 	);
-	// 	setSelectedGuest(matchingGuest);
-	// };
-
 	const handleClickGuest = (fullName: string) => {
 		const slug = nameToUrlSlug(fullName);
 		navigate(`/guests/${slug}`);
@@ -48,15 +41,17 @@ function App() {
 
 	return (
 		<Page>
-			<div className="flex flex-col items-center gap-4">
+			<div className="flex flex-col items-center gap-8">
 				<img
 					src={"weddingphoto.webp"}
 					alt="Couple photo"
 					className="rounded-full h-60 w-60 grayscale"
 				/>
-				<h3 className="text-5xl font-bold">Guest Info Lookup</h3>
+				<h3 className="text-4xl font-bold">
+					We are SO excited to celebrate with you!
+				</h3>
 				<AutoCompleteTextInput
-					placeholder={"Type your name..."}
+					placeholder={"Find your name..."}
 					dataSet={guestNames}
 					onSelect={handleClickGuest}
 				/>

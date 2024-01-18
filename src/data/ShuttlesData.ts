@@ -15,7 +15,7 @@ export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
 		pickupAddress: airportAddress,
 		pickupTime: "12:00 PM",
 		pickupNotes:
-			"Pickup will be at Terminal 1. Folks landing at Terminal 2 will need to take the Skytrain over to Terminal 1.",
+			"Pickup will be at Terminal 1. Folks landing at Terminal 2 will need to take the Aerotrén or public bus service.",
 		dropoffName: "Venue",
 		dropoffAddress: venueAddress,
 		dropoffTime: "Expected to reach the venue around 3:30 PM",
@@ -41,7 +41,7 @@ export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
 		pickupAddress: airportAddress,
 		pickupTime: "3:15 PM",
 		pickupNotes:
-			"Pickup will be at Terminal 1. This is the latest courtesy shuttle we are able to offer. If you happen to miss this shuttle, please consider the Pullman bus or a private vehicle hire.",
+			"Pickup will be at Terminal 1. Folks landing at Terminal 2 will need to take the Aerotrén or public bus service. This is the latest courtesy shuttle we are able to offer. If you happen to miss this shuttle, please consider the Pullman bus or a private vehicle hire.",
 		dropoffName: "Venue",
 		dropoffAddress: venueAddress,
 		dropoffTime: "Expected to reach the venue around 7 PM",

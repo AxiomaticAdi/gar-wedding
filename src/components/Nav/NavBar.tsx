@@ -13,20 +13,20 @@ export default function Navbar() {
 			path: "/",
 		},
 		{
-			text: "Shuttles",
-			path: "/shuttles/",
-		},
-		{
 			text: "Checklist",
 			path: "/checklist/",
+		},
+		{
+			text: "Guides",
+			path: "/guides/",
 		},
 		{
 			text: "Schedule",
 			path: "/schedule/",
 		},
 		{
-			text: "Guides",
-			path: "/guides/",
+			text: "Shuttles",
+			path: "/shuttles/",
 		},
 	];
 
