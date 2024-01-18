@@ -13,7 +13,6 @@ export default function WebMenu({ links }: WebMenuProps) {
 						<NavLink
 							key={index}
 							to={path}
-							end
 							className={({ isActive }) =>
 								[
 									"hover:text-teal-800 cursor-pointer",
