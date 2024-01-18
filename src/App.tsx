@@ -41,7 +41,7 @@ function App() {
 
 	return (
 		<Page>
-			<div className="flex flex-col items-center gap-8">
+			<div className="flex flex-col items-center gap-8 mb-48">
 				<img
 					src={"weddingphoto.webp"}
 					alt="Couple photo"
