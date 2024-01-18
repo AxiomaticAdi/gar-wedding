@@ -21,6 +21,10 @@ export default function Navbar() {
 			path: "/checklist/",
 		},
 		{
+			text: "Schedule",
+			path: "/schedule/",
+		},
+		{
 			text: "Guides",
 			path: "/guides/",
 		},
