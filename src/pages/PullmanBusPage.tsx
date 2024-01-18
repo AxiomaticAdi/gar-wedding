@@ -12,7 +12,6 @@ export default function PullmanBusPage() {
 						href="https://pullman.mx/"
 						className="text-blue-600 hover:text-blue-800"
 					>
-						{" "}
 						Pullman De Morelos
 					</a>{" "}
 					private bus company.
@@ -42,10 +41,10 @@ export default function PullmanBusPage() {
 						opportunity to experience the beautiful Mexican landscape.
 					</li>
 					<li className="mb-3">
-						<strong>Taxi or Uber to venue</strong> - From this location you
-						should be able to call an Uber to pick you up and take you the
-						remaining distance. If you have any trouble getting a ride, please
-						walk to the Casino and ask for a taxi, or call the venue.
+						<strong>Taxi or Uber to venue</strong> - From this location you can
+						call an Uber to pick you up and take you the remaining distance. If
+						you have any trouble getting a ride, please walk to the Casino and
+						ask for a taxi, or call the venue.
 					</li>
 				</ol>
 
