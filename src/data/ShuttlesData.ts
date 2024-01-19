@@ -1,9 +1,14 @@
 import { ShuttleOptionsDictionary } from "../types";
 
-const airportAddress =
-	"Aeropuerto Internacional Benito Juárez, Terminal 1. Exact location TBD";
+const airportPickupAddress =
+	"Aeropuerto Internacional Benito Juárez, Terminal 1, Room F (between gates 7 & 8) next to Fast Food";
+
+const airportDropoffAddress =
+	"Aeropuerto Internacional Benito Juárez, Terminal 1";
+
 const hotelAddress =
 	"Av. P.º de la Reforma 465, Cuauhtémoc, 06500 Ciudad de México, CDMX, Mexico";
+
 const venueAddress =
 	"Hacienda Vista Hermosa, Carretera Alpuyeca Tequesquitengo Km 7, 62680 San José Vista Hermosa, Mor., Mexico";
 
@@ -12,7 +17,7 @@ export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
 		id: "Anakin",
 		description: "12 PM @ Airport",
 		pickupName: "Airport",
-		pickupAddress: airportAddress,
+		pickupAddress: airportPickupAddress,
 		pickupTime: "12:00 PM",
 		pickupNotes:
 			"Pickup will be at Terminal 1. Folks landing at Terminal 2 will need to take the Aerotrén or public bus service.",
@@ -38,7 +43,7 @@ export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
 		id: "Grogu",
 		description: "3:15 PM @ Airport",
 		pickupName: "Airport",
-		pickupAddress: airportAddress,
+		pickupAddress: airportPickupAddress,
 		pickupTime: "3:15 PM",
 		pickupNotes:
 			"Pickup will be at Terminal 1. Folks landing at Terminal 2 will need to take the Aerotrén or public bus service. This is the latest courtesy shuttle we are able to offer. If you happen to miss this shuttle, please consider the Pullman bus or a private vehicle hire.",
@@ -59,7 +64,7 @@ export const DepartureShuttlesData: ShuttleOptionsDictionary = {
 		pickupTime: "7:15 AM",
 		pickupNotes: "Shuttle will depart from the road near the lobby",
 		dropoffName: "Airport",
-		dropoffAddress: airportAddress,
+		dropoffAddress: airportDropoffAddress,
 		dropoffTime: "10:00 AM",
 	},
 	taco: {
