@@ -1,6 +1,8 @@
+import Confetti from "react-confetti";
 import ChecklistItem, { ChecklistItemProps } from "../components/ChecklistItem";
 import Divider from "../components/Divider";
 import Page from "../components/Page";
+import { useRef, useState } from "react";
 
 const mustList: ChecklistItemProps[] = [
 	{
@@ -54,8 +56,31 @@ const optionalList: ChecklistItemProps[] = [
 ];
 
 export default function ChecklistPage() {
+	const pageWidth = window.innerWidth;
+	const pageHeight = window.innerHeight;
+
+	const [showConfetti, setShowConfetti] = useState(false);
+	const checkedBoxes = useRef(0);
+
+	const onChange = (value: boolean) => {
+		if (value) {
+			checkedBoxes.current++;
+			console.log("increase");
+		} else {
+			checkedBoxes.current--;
+			console.log("decrease");
+		}
+
+		if (checkedBoxes.current === mustList.length) {
+			setShowConfetti(true);
+		} else {
+			setShowConfetti(false);
+		}
+	}
+
 	return (
 		<Page>
+		    {showConfetti && <Confetti width={pageWidth} height={pageHeight} recycle={false} gravity={1}/>}
 			<div className="mx-4">
 				<div className="flex flex-col gap-4">
 					<h2 className="text-2xl text-center font-bold my-auto">
@@ -70,6 +95,7 @@ export default function ChecklistPage() {
 							key={item.id}
 							title={item.title}
 							description={item.description}
+							onChange={onChange}
 						/>
 					))}
 				</div>
