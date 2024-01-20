@@ -16,6 +16,8 @@ import CatholicCeremonyPage from "./pages/CatholicCeremonyPage.tsx";
 import GuidesPage from "./pages/GuidesPage.tsx";
 import PullmanBusPage from "./pages/PullmanBusPage.tsx";
 import SchedulePage from "./pages/SchedulePage.tsx";
+import ShuttlePassengersPage from "./pages/ShuttlePassengersPage.tsx";
+import AdminPage from "./pages/AdminPage.tsx";
 
 const router = createHashRouter([
 	{
@@ -66,6 +68,16 @@ const router = createHashRouter([
 	{
 		path: "/guides/catholic-ceremony/",
 		element: <CatholicCeremonyPage />,
+		errorElement: <ErrorPage />,
+	},
+	{
+		path: "/admin/",
+		element: <AdminPage />,
+		errorElement: <ErrorPage />,
+	},
+	{
+		path: "/admin/:shuttleId/",
+		element: <ShuttlePassengersPage />,
 		errorElement: <ErrorPage />,
 	},
 ]);

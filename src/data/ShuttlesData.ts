@@ -15,6 +15,8 @@ const venueAddress =
 export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
 	anakin: {
 		id: "Anakin",
+		type: "arrival",
+		capacity: 47,
 		description: "12 PM @ Airport",
 		pickupName: "Airport",
 		pickupAddress: airportPickupAddress,
@@ -29,6 +31,8 @@ export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
 	},
 	vader: {
 		id: "Vader",
+		type: "arrival",
+		capacity: 47,
 		description: "12:30 PM @ Hotel",
 		pickupName: "Hotel Marquis Reforma",
 		pickupAddress: hotelAddress,
@@ -41,6 +45,8 @@ export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
 	},
 	grogu: {
 		id: "Grogu",
+		type: "arrival",
+		capacity: 47,
 		description: "3:15 PM @ Airport",
 		pickupName: "Airport",
 		pickupAddress: airportPickupAddress,
@@ -58,6 +64,8 @@ export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
 export const DepartureShuttlesData: ShuttleOptionsDictionary = {
 	shakshuka: {
 		id: "Shakshuka",
+		type: "departure",
+		capacity: 20,
 		description: "7:15 AM to Airport",
 		pickupName: "Venue",
 		pickupAddress: venueAddress,
@@ -69,6 +77,8 @@ export const DepartureShuttlesData: ShuttleOptionsDictionary = {
 	},
 	taco: {
 		id: "Taco",
+		type: "departure",
+		capacity: 94,
 		description: "11 AM to City",
 		pickupName: "Venue",
 		pickupAddress: venueAddress,
