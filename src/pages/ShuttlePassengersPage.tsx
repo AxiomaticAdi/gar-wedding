@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { allShuttlesData } from "../data/ShuttlesData";
 import { useEffect, useState } from "react";
 import { GuestListService } from "../services/GuestListService";
-import { alphabeticalLastNameSort } from "../logic";
+import { alphabeticalLastNameSort, countGuestsByShuttle } from "../logic";
 import { Guest } from "../types";
 import LoadingSpinner from "../components/LoadingSpinner";
 
@@ -32,7 +32,11 @@ export default function ShuttlePassengersPage() {
 	}
 
 	const shuttle = allShuttlesData[shuttleId as keyof typeof allShuttlesData];
+	const shuttlePassengerCounts = countGuestsByShuttle(guestList);
 	const isArrivalShuttle: boolean = shuttle.type === "arrival";
+	const isSith: boolean =
+		shuttle.id.toLowerCase() === "anakin" ||
+		shuttle.id.toLowerCase() === "vader";
 
 	const shuttlePassengers: Guest[] = guestList.filter((guest) => {
 		if (isArrivalShuttle) {
@@ -60,12 +64,27 @@ export default function ShuttlePassengersPage() {
 			<div className="flex flex-col gap-4">
 				<div className="flex gap-4 bg-white shadow-md rounded-md p-4">
 					<p>
-						<strong>Current passenger count:</strong> {shuttlePassengers.length}
+						<strong>Passengers:</strong>{" "}
+						{shuttlePassengerCounts[shuttle.id.toLowerCase()]}
 					</p>
 					<p>
 						<strong>Capacity:</strong> {shuttle.capacity}
 					</p>
 				</div>
+				{isSith && (
+					<div className="flex flex-col bg-white shadow-md rounded-md p-4">
+						<p>
+							<strong className="text-center">
+								This shuttle has two stops!
+							</strong>{" "}
+						</p>
+						<p>
+							Total passengers in shuttle:{" "}
+							{shuttlePassengerCounts["anakin"] +
+								shuttlePassengerCounts["vader"]}
+						</p>
+					</div>
+				)}
 
 				<div>
 					<p>
