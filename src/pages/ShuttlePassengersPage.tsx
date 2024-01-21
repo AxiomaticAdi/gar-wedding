@@ -1,5 +1,5 @@
 import Page from "../components/Page";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { allShuttlesData } from "../data/ShuttlesData";
 import { useEffect, useState } from "react";
 import { GuestListService } from "../services/GuestListService";
@@ -57,12 +57,19 @@ export default function ShuttlePassengersPage() {
 
 	return (
 		<Page>
+			<Link
+				to={"/admin/"}
+				className="px-4 py-2 bg-slate-500 text-white shadow-md rounded-md mb-6"
+			>
+				{" "}
+				← Back to Admin
+			</Link>
 			<h3 className="text-5xl font-bold">{shuttle.id}</h3>
 			<p className="my-2 text-lg">
 				{isArrivalShuttle ? "Arrival Shuttle" : "Departure Shuttle"}
 			</p>
 			<div className="flex flex-col gap-4">
-				<div className="flex gap-4 bg-white shadow-md rounded-md p-4">
+				<div className="flex gap-4 bg-white rounded-md p-4">
 					<p>
 						<strong>Passengers:</strong>{" "}
 						{shuttlePassengerCounts[shuttle.id.toLowerCase()]}
