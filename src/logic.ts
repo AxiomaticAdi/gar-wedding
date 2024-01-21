@@ -33,3 +33,24 @@ export function urlSlugToName(slug: string): string {
 	let name = slug.replace(/-/g, " ");
 	return name;
 }
+
+export function countGuestsByShuttle(guests: Guest[]): Record<string, number> {
+	const shuttleCounts: Record<string, number> = {};
+
+	guests.forEach((guest) => {
+		// Count for arrival shuttle
+		if (guest.arrivalShuttleId) {
+			const arrivalShuttle = guest.arrivalShuttleId.toLowerCase();
+			shuttleCounts[arrivalShuttle] = (shuttleCounts[arrivalShuttle] || 0) + 1;
+		}
+
+		// Count for departure shuttle
+		if (guest.departureShuttleId) {
+			const departureShuttle = guest.departureShuttleId.toLowerCase();
+			shuttleCounts[departureShuttle] =
+				(shuttleCounts[departureShuttle] || 0) + 1;
+		}
+	});
+
+	return shuttleCounts;
+}
