@@ -56,7 +56,7 @@ export default function AdminPage() {
 										Anakin
 									</Link>{" "}
 									(Airport),{" "}
-									<Link to="/admin/anakin" className="text-blue-500 underline">
+									<Link to="/admin/vader" className="text-blue-500 underline">
 										Vader
 									</Link>{" "}
 									(Hotel)
