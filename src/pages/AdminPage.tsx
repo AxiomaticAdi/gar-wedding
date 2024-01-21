@@ -36,7 +36,9 @@ export default function AdminPage() {
 			<div className="flex flex-col items-center gap-12">
 				<div>
 					<h3 className="text-5xl font-bold">Admin Page</h3>
-					<p className="my-2 text-lg">Find shuttle passenger lists below</p>
+					<p className="my-2 text-lg">
+						Click on shuttle name to access passenger list
+					</p>
 				</div>
 				<div className="bg-white shadow-md p-4 rounded-md">
 					<table className="table-auto">
@@ -52,11 +54,11 @@ export default function AdminPage() {
 							<tr>
 								<td>1</td>
 								<td>
-									<Link to="/admin/anakin" className="text-blue-500 underline">
+									<Link to="/admin/anakin/" className="text-blue-500 underline">
 										Anakin
 									</Link>{" "}
 									(Airport),{" "}
-									<Link to="/admin/vader" className="text-blue-500 underline">
+									<Link to="/admin/vader/" className="text-blue-500 underline">
 										Vader
 									</Link>{" "}
 									(Hotel)
