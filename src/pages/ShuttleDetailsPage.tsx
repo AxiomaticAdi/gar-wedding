@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { allShuttlesData } from "../data/ShuttlesData";
 import Divider from "../components/Divider";
 import NavigationButtonGroup from "../components/NavigationButtonGroup";
+import ShuttleHelpSection from "../components/ShuttleHelpSection";
 
 export default function ShuttleDetailsPage() {
 	const { shuttleId } = useParams();
@@ -63,6 +64,13 @@ export default function ShuttleDetailsPage() {
 					</>
 				)}
 			</div>
+
+			{shuttle.type === "arrival" && (
+				<div className="mt-8">
+					<ShuttleHelpSection />
+				</div>
+			)}
+
 			<div className="mt-4">
 				<NavigationButtonGroup />
 			</div>

@@ -1,7 +1,10 @@
 import { ShuttleOptionsDictionary } from "../types";
 
+const airportShuttleCoordinatorPickupNotes =
+	"Starting 30 minutes prior to departure, shuttle coordinators will be waiting at an accessible location within Terminal 1. Look for their signage. Folks landing at Terminal 2 will need to take the Aerotrén or public bus service.";
+
 const airportPickupAddress =
-	"Aeropuerto Internacional Benito Juárez, Terminal 1, Room F (between gates 7 & 8) next to Fast Food";
+	"Aeropuerto Internacional Benito Juárez,  Terminal 1, look for shuttle coordinators holding signage.";
 
 const airportDropoffAddress =
 	"Aeropuerto Internacional Benito Juárez, Terminal 1";
@@ -21,8 +24,7 @@ export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
 		pickupName: "Airport",
 		pickupAddress: airportPickupAddress,
 		pickupTime: "12:00 PM",
-		pickupNotes:
-			"Pickup will be at Terminal 1. Folks landing at Terminal 2 will need to take the Aerotrén or public bus service.",
+		pickupNotes: airportShuttleCoordinatorPickupNotes,
 		dropoffName: "Venue",
 		dropoffAddress: venueAddress,
 		dropoffTime: "Expected to reach the venue around 3:30 PM",
@@ -51,8 +53,7 @@ export const ArrivalShuttlesData: ShuttleOptionsDictionary = {
 		pickupName: "Airport",
 		pickupAddress: airportPickupAddress,
 		pickupTime: "3:15 PM",
-		pickupNotes:
-			"Pickup will be at Terminal 1. Folks landing at Terminal 2 will need to take the Aerotrén or public bus service. This is the latest courtesy shuttle we are able to offer. If you happen to miss this shuttle, please consider the Pullman bus or a private vehicle hire.",
+		pickupNotes: airportShuttleCoordinatorPickupNotes,
 		dropoffName: "Venue",
 		dropoffAddress: venueAddress,
 		dropoffTime: "Expected to reach the venue around 7 PM",
