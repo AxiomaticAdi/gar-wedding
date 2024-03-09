@@ -15,7 +15,7 @@ function isErrorWithMessageAndStatusText(
 }
 
 const errorMessageImage =
-	"https://media.discordapp.xyz/attachments/1157014089592221729/1194503875315630100/ErrorPage.webp?ex=65b0976c&is=659e226c&hm=5806d4aa267df5337e337ecb4764d31b8bf0c0e0c6c909fa9a5cfd8267ebc281&=&format=webp&width=1182&height=1182";
+	"https://res.cloudinary.com/djxfhec23/image/upload/v1709942967/GracieShaadiConAdi/ErrorPage_n4gdrt.webp";
 
 export default function ErrorPage() {
 	const error = useRouteError();
