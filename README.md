@@ -8,9 +8,9 @@ This repository contains the code for a custom React web application created for
 
 The Gracie & Adi's Wedding Website is a custom React web application designed specifically for their wedding event. It served as a central hub for guests to access essential information, including shuttle schedules, ceremony details, and other important updates.
 
-## Stack Used
+## Technologies Used
 
-The wedding website was built using the following stack:
+The wedding website was built using the following tech:
 
 - **React**: A popular JavaScript library for building user interfaces.
 - **Vite**: A fast frontend build tool that enabled rapid development and efficient code bundling.
